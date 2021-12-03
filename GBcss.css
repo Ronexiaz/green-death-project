@@ -3,7 +3,7 @@ html {
 	font-family: Georgia, serif;
 }
 header {
-	width: 100%;
+	width: 100vw;
 	height: 60px;
 	background-color: #003300;
 	text-align: left;
@@ -17,7 +17,7 @@ header {
 body {
 	padding-bottom: 0;
 	margin: 0;
-	height: 100%;
+	max-height: 100vw;
 	background-color: #FFF9E9;
 }
 
@@ -41,6 +41,16 @@ article.indexBlurb {
 	width: 60%;
 }
 
+figure {
+	margin: auto;
+}
+
+section.indexBlurb {
+	margin: auto;
+	padding: 10px;
+	width: 60%;
+}
+
 h2.indexBlurb {
 	font-size: 24px;
 	font-family: Georgia, serif;
@@ -58,16 +68,21 @@ footer {
 	font-family: Georgia, serif;
 	font-weight: bold;
 	text-align: center;
-	padding: 10px;
+	width: 100vw;
 }
 
+/* Two image containers*/
 .column {
-	flex: 50%;
-	padding: 5px;
+  float: left;
+  width: 533px;
+  padding: 10px;
 }
 
-.row {
-	display: flex;
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
 /* Please stay still */
@@ -76,7 +91,6 @@ footer {
 	font-family: Georgia, serif;
 	color: #FFF9E9;
 	height: 50px;
-	width: 100%;
 	bottom: 0;
 }
 
